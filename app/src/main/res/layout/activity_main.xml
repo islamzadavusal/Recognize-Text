@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/color3"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/inputImageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Take Image"
+            android:textColor="@color/color4"
+            android:textSize="15dp"
+            app:backgroundTint="@color/color1"
+            app:icon="@drawable/photo_add"
+            app:iconSize="35dp"
+            app:iconTint="@color/color3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recognizeTextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Recognize Text"
+            android:textColor="@color/color4"
+            android:textSize="15dp"
+            app:backgroundTint="@color/color1"
+            app:icon="@drawable/scanner_image"
+            app:iconSize="35dp"
+            app:iconTint="@color/color3" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageIv"
+            android:layout_width="370dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/image_icon"
+            app:strokeColor="@color/color1"
+            app:strokeWidth="5dp" />
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Recognize Text:"
+            android:textSize="25dp"
+            android:textColor="@color/color1" />
+
+        <EditText
+            android:id="@+id/recognizedTextEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/color1"
+            android:textColor="@color/color1" />
+
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</LinearLayout>
